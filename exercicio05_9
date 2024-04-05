@@ -1,0 +1,22 @@
+package aula09Exercicio01;
+import java.util.Scanner;
+
+public class Exercicio05 {
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Primeira nota: ");
+		double nota01 = scan.nextDouble();
+		
+		System.out.println("Segunda nota: ");
+		double nota02 = scan.nextDouble();
+		
+		double media = (nota01 + nota02) / 2;
+		String mediaCorrigida = String.format("A média é %.2f", media);
+		
+		System.out.println(mediaCorrigida);
+		
+		scan.close();
+	}
+}
