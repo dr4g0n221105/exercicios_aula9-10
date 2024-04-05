@@ -10,7 +10,6 @@ public class Exercicio01 {
 		
 		String[] separarNome = nome.split(" ");
 		System.out.println("Seu primeiro nome é: " + separarNome[0]);
-		
 		scan.close();
 	}		
 }
