@@ -6,7 +6,7 @@ public class Exercicio01 {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Digite seu nome completo: ");
-		String nome = leitor.next();
+		String nome = scan.next();
 		
 		String[] separarNome = nome.split(" ");
 		System.out.println("Seu primeiro nome é: " + separarNome[0]);
