@@ -1,0 +1,18 @@
+package aula09Exercicio01;
+import java.util.Scanner;
+
+public class Exercicio {
+	public static void main(String[] args) {
+		//pegar primeiro nome maiúsculo
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite seu nome completo: ");
+		String nome = scan.next();
+		
+		String[] separarNome = nome.split(" ");
+		System.out.println("Seu primeiro nome é: " + separarNome[0].toUpperCase());
+		
+		scan.close();		
+	}
+}
