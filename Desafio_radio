@@ -1,0 +1,118 @@
+package sdsdsd;
+
+import java.util.Scanner;
+
+public class aaaaa {
+
+	int volume;
+	boolean ligado;
+	
+	//construtor
+	
+	public aaaaa(){
+
+		volume = 50;
+		ligado = false;
+		
+	}
+//funçao ligar radio
+	
+public void ligar(
+		) {
+	if(!ligado) {
+		System.out.println("\n ______________________ \n");
+		System.out.println("Radio ligado");
+		System.out.println("\n ______________________ \n");
+		ligado = true;
+	}else {
+		System.out.println("O radio já está ligado");
+		
+	}
+}
+  public void desligar() {
+	  if(ligado) {
+	  System.out.println("\n ______________________ \n");
+	  System.out.println("Radio desligado");
+	  System.out.println("\n ______________________ \n");
+	  ligado = false;
+	}else {
+		System.out.println("O radio já está desligado");
+  }
+  }
+//aumentar o volume
+ public void aumentarVol() {
+	 if (ligado) {
+		 if (volume < 100) {
+			 volume += 10;
+			 System.out.println("Volume aumentado para " + volume + "%.");
+		 } else {
+			 System.out.println("Volume já está no máximo.");
+		 }
+	 } else {
+		 System.out.println("Por favor, ligue o rádio primeiro.");
+	 }
+ }
+//diminuir o volume
+public void diminuirVol() {
+	 if (ligado) {
+		 if (volume > 0) {
+			 volume -= 10;
+			 System.out.println("Volume diminuido para " + volume + "%.");
+		 } else {
+			 System.out.println("Volume já está no mínimo.");
+		 }
+	 } else {
+		 System.out.println("Por favor, ligue o rádio primeiro.");
+	 }
+}
+  
+//Verificar o status do rádio
+public void verificar() {
+	if(ligado) {
+		System.out.println("O radio está ligado e está com " + volume + "% de volume.");
+		} else {
+			System.out.println("O radio já está desligado");
+		}
+	
+}
+	public static void main(String [] args) {
+		aaaaa radio = new aaaaa();
+		Scanner scanner = new Scanner(System.in);
+		int opcao;
+		
+		do {
+			System.out.println("\nMENU:");
+			System.out.println("1-ligar");
+			System.out.println("2-desligar");
+			System.out.println("3-verificar");
+			System.out.println("4-aumentar volume");
+			System.out.println("5-1diminuir volume");
+			opcao = scanner.nextInt();
+			
+			switch(opcao) {
+			case 1:
+				radio.ligar();
+				break;
+			case 2:
+				radio.desligar();
+				 break;
+			case 3:
+				radio.verificar();
+				break;
+			case 4:
+				radio.aumentarVol();
+				break;
+			case 5:
+				radio.diminuirVol();
+				break;
+				default:
+					System.out.print("Opcão invalida");
+					break;
+			}
+		}
+		while(opcao !=0);
+		scanner.close();
+		
+	}
+	
+}
